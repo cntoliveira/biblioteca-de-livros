@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi\\BibliotecaApi.csproj": {}
+    "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi.csproj": {}
   },
   "projects": {
-    "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi\\BibliotecaApi.csproj": {
+    "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi\\BibliotecaApi.csproj",
+        "projectUniqueName": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi.csproj",
         "projectName": "BibliotecaApi",
-        "projectPath": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi\\BibliotecaApi.csproj",
+        "projectPath": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi.csproj",
         "packagesPath": "D:\\Users\\caleb\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi\\obj\\",
+        "outputPath": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -47,9 +47,13 @@
               "target": "Package",
               "version": "[8.0.15, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[8.1.1, )"
             }
           },
           "imports": [
