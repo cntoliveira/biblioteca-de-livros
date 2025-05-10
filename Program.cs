@@ -50,6 +50,12 @@ app.MapGet("/livros/{id}", async (int id, AppDbContext db) =>
 // Criar novo livro
 app.MapPost("/livros", async (Livro livro, AppDbContext db) =>
 {
+    // Validação
+    if (string.IsNullOrEmpty(livro.Titulo) || string.IsNullOrEmpty(livro.Autor))
+    {
+        return Results.BadRequest("Título e Autor são obrigatórios!");
+    }
+
     db.Livros.Add(livro);
     await db.SaveChangesAsync();
     return Results.Created($"/livros/{livro.Id}", livro);
@@ -58,6 +64,12 @@ app.MapPost("/livros", async (Livro livro, AppDbContext db) =>
 // Atualizar livro
 app.MapPut("/livros/{id}", async (int id, Livro inputLivro, AppDbContext db) =>
 {
+    // Validação
+    if (string.IsNullOrEmpty(inputLivro.Titulo) || string.IsNullOrEmpty(inputLivro.Autor))
+    {
+        return Results.BadRequest("Título e Autor são obrigatórios!");
+    }
+
     var livro = await db.Livros.FindAsync(id);
     if (livro is null) return Results.NotFound("Livro não encontrado!");
 
