@@ -1,0 +1,12 @@
+# Ignorar a pasta obj (arquivos temporários de build)
+bin/
+obj/
+
+# Ignorar arquivos de usuário do Visual Studio
+.vs/
+.vscode/
+
+# Ignorar arquivos de build específicos do .NET
+*.user
+*.suo
+*.userprefs
