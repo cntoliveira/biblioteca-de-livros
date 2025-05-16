@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vitor\\Desktop\\biblioteca-de-livros\\BibliotecaApi.csproj": {}
+    "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vitor\\Desktop\\biblioteca-de-livros\\BibliotecaApi.csproj": {
+    "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vitor\\Desktop\\biblioteca-de-livros\\BibliotecaApi.csproj",
+        "projectUniqueName": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi.csproj",
         "projectName": "BibliotecaApi",
-        "projectPath": "C:\\Users\\Vitor\\Desktop\\biblioteca-de-livros\\BibliotecaApi.csproj",
-        "packagesPath": "C:\\Users\\Vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vitor\\Desktop\\biblioteca-de-livros\\obj\\",
+        "projectPath": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\BibliotecaApi.csproj",
+        "packagesPath": "D:\\Users\\caleb\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\caleb\\Desktop\\BibliotecaApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Vitor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -74,24 +73,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.14, 8.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.14, 8.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.14, 8.0.14]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.14, 8.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -100,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
