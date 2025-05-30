@@ -12,7 +12,7 @@ const formDelete = document.getElementById('form-delete');
 
 const apiURL = 'http://localhost:5295/livros';
 
-const getLivros = async() => {
+const getLivros = async () => {
     listaLivros.innerHTML = '';
 
     try {
@@ -22,7 +22,7 @@ const getLivros = async() => {
 
         livros.forEach(livro => {
             const li = document.createElement('li');
-            li.innerText = `ID: ${livro.id} | Título: ${livro.titulo} | Autor: ${livro.autor}`;
+            li.innerText = `ID: ${livro.id} | Título: ${livro.titulo} | Autor: ${livro.autor} | Gênero: ${livro.genero} | Ano: ${livro.anoPublicacao}`;
             listaLivros.appendChild(li);
         });
 
@@ -32,7 +32,7 @@ const getLivros = async() => {
     }
 };
 
-const getLivroPorId = async(id) => {
+const getLivroPorId = async (id) => {
     listaLivros.innerHTML = '';
 
     try {
@@ -41,7 +41,7 @@ const getLivroPorId = async(id) => {
         const livro = await response.json();
 
         const li = document.createElement('li');
-        li.innerText = `ID: ${livro.id} | Título: ${livro.titulo} | Autor: ${livro.autor}`;
+        li.innerText = `ID: ${livro.id} | Título: ${livro.titulo} | Autor: ${livro.autor} | Gênero: ${livro.genero} | Ano: ${livro.anoPublicacao}`;
         listaLivros.appendChild(li);
 
     } catch (error) {
@@ -51,7 +51,7 @@ const getLivroPorId = async(id) => {
     }
 };
 
-const postLivro = async(novoLivro) => {
+const postLivro = async (novoLivro) => {
     listaLivros.innerHTML = '';
 
     try {
@@ -64,7 +64,7 @@ const postLivro = async(novoLivro) => {
         const livro = await response.json();
 
         alert(`O livro "${livro.titulo}" foi adicionado com sucesso!`);
-        getLivros(); // Atualiza a lista após adicionar
+        getLivros();
 
     } catch (error) {
         console.log(error.message);
@@ -72,10 +72,12 @@ const postLivro = async(novoLivro) => {
     }
 };
 
-const putLivro = async() => {
+const putLivro = async () => {
     const id = document.getElementById('input-id-update').value;
     const titulo = document.getElementById('input-titulo-update').value;
     const autor = document.getElementById('input-autor-update').value;
+    const genero = document.getElementById('input-genero-update').value;
+    const anoPublicacao = parseInt(document.getElementById('input-ano-update').value);
 
     listaLivros.innerHTML = '';
 
@@ -83,7 +85,7 @@ const putLivro = async() => {
         const response = await fetch(`${apiURL}/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ titulo, autor })
+            body: JSON.stringify({ titulo, autor, genero, anoPublicacao })
         });
         if (!response.ok) throw new Error('Erro ao atualizar o livro!');
         const livro = await response.json();
@@ -97,7 +99,7 @@ const putLivro = async() => {
     }
 };
 
-const deleteLivro = async() => {
+const deleteLivro = async () => {
     const id = document.getElementById('input-id-delete').value;
     listaLivros.innerHTML = '';
 
@@ -129,20 +131,37 @@ formBuscaId.addEventListener('submit', e => {
 
 formPost.addEventListener('submit', e => {
     e.preventDefault();
+
     postLivro({
         titulo: inputTituloNovo.value,
         autor: inputAutorNovo.value,
         genero: inputGeneroNovo.value,
         anoPublicacao: parseInt(inputAnoNovo.value)
     });
+
+    // limpa os campos depois de adicionar
+    inputTituloNovo.value = '';
+    inputAutorNovo.value = '';
+    inputGeneroNovo.value = '';
+    inputAnoNovo.value = '';
 });
 
 formPut.addEventListener('submit', e => {
     e.preventDefault();
     putLivro();
+
+    // limpa os campos depois de atualizar
+    document.getElementById('input-id-update').value = '';
+    document.getElementById('input-titulo-update').value = '';
+    document.getElementById('input-autor-update').value = '';
+    document.getElementById('input-genero-update').value = '';
+    document.getElementById('input-ano-update').value = '';
 });
 
 formDelete.addEventListener('submit', e => {
     e.preventDefault();
     deleteLivro();
+
+    // limpa o campo depois de deletar
+    document.getElementById('input-id-delete').value = '';
 });

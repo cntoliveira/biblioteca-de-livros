@@ -1,21 +1,15 @@
-// Representa o modelo de dados para um livro na biblioteca
 namespace BibliotecaApi.Models
 {
     public class Livro
     {
-        // Identificador único do livro
         public int Id { get; set; }
 
-        // Título do livro
-        public string Titulo { get; set; }
+        public string Titulo { get; set; } = string.Empty;
 
-        // Nome do autor do livro
-        public string Autor { get; set; }
+        public string Autor { get; set; } = string.Empty;
 
-        // Gênero literário do livro (ex: Ficção, Romance, etc.)
-        public string Genero { get; set; }
+        public string Genero { get; set; } = string.Empty;
 
-        // Ano de publicação do livro
         public int AnoPublicacao { get; set; }
     }
 }
