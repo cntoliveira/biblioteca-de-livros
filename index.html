@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca Minimal API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1><img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="" width="50">BIBLIOTECA DE LIVROS</h1>
+
+    <button id="btn-todos">Todos os Livros</button>
+
+    <form action="" method="get" id="form-busca-id">
+        <h2>🔍 Buscar Livro por ID [GET]</h2>
+        <input type="number" id="input-id-busca" placeholder="ID do Livro" required min="1">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <form action="" method="get" id="form-post">
+        <h2>➕ Adicionar novo Livro [POST]</h2>
+        <input type="text" id="input-titulo-novo" placeholder="Título" required>
+        <input type="text" id="input-autor-novo" placeholder="Autor" required>
+        <input type="text" id="input-genero-novo" placeholder="Gênero" required>
+        <input type="number" id="input-ano-novo" placeholder="Ano de Publicação" required min="1">
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <form action="" method="get" id="form-put">
+        <h2>✏️ Atualizar Livro [PUT]</h2>
+        <input type="number" id="input-id-update" placeholder="ID para atualizar" required>
+        <input type="text" id="input-titulo-update" placeholder="Novo Título">
+        <input type="text" id="input-autor-update" placeholder="Novo Autor">
+        <input type="text" id="input-genero-update" placeholder="Novo Gênero">
+        <input type="number" id="input-ano-update" placeholder="Novo Ano de Publicação" min="1">
+        <button type="submit">Atualizar</button>
+    </form>
+
+    <form action="" method="get" id="form-delete">
+        <h2>❌ Deletar Livro [DELETE]</h2>
+        <input type="number" id="input-id-delete" placeholder="ID para deletar" required>
+        <button type="submit">Deletar</button>
+    </form>
+
+    <div>
+        <h2>📈 RESULTADO:</h2>
+        <ul id="lista-livros"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
